@@ -10,6 +10,7 @@ import UIKit
 import Alamofire
 
 class NetworkManager: NSObject {
+    
 	var headers: Dictionary = ["Content-Type" : "application/text"]
 	var baseURL: String = "https://bsg.redmatmediabizapp.com/admin/push/"
 	
@@ -23,10 +24,8 @@ class NetworkManager: NSObject {
 		configuration.timeoutIntervalForRequest = 240
 		return Alamofire.SessionManager(configuration: configuration)
 	}()
-	
-	
-	
-	func loadNotifications( success: @escaping (_ notifcations: [[String : AnyObject]]) -> Void, failure: @escaping (_ errorMessage: String) -> Void) {
+    
+    func loadNotifications( success: @escaping (_ notifcations: [[String : AnyObject]]) -> Void, failure: @escaping (_ errorMessage: String) -> Void) {
 		let parameters = ["AppVersion" : "BSG", "userID" : "2"]
 		alamofireManager.request(String(format:"%@getPushNotifications.php", baseURL), method: .post, parameters: parameters, encoding: URLEncoding.default, headers: [:]/*headers*/).responseJSON { response in
 			debugPrint(response)
@@ -37,7 +36,5 @@ class NetworkManager: NSObject {
 				failure("Unable to complete request")
 			}
 		}
-	}
-
+    }
 }
-

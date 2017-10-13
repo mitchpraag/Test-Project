@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		AA55038C1F8EA2090021324F /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA55038B1F8EA2090021324F /* MainTableViewController.swift */; };
 		AA55038E1F8EA23D0021324F /* messageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA55038D1F8EA23D0021324F /* messageController.swift */; };
+		AAB250E61F9049AB00927121 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB250E51F9049AB00927121 /* DetailViewController.swift */; };
 		F38CB8E11F744E00001F26C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38CB8E01F744E00001F26C6 /* AppDelegate.swift */; };
 		F38CB8E61F744E00001F26C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F38CB8E41F744E00001F26C6 /* Main.storyboard */; };
 		F38CB8E81F744E00001F26C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F38CB8E71F744E00001F26C6 /* Assets.xcassets */; };
@@ -102,6 +103,7 @@
 /* Begin PBXFileReference section */
 		AA55038B1F8EA2090021324F /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		AA55038D1F8EA23D0021324F /* messageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = messageController.swift; sourceTree = "<group>"; };
+		AAB250E51F9049AB00927121 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		F38CB8DD1F744E00001F26C6 /* Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F38CB8E01F744E00001F26C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F38CB8E51F744E00001F26C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 			children = (
 				F38CB8E01F744E00001F26C6 /* AppDelegate.swift */,
 				F38CB8E41F744E00001F26C6 /* Main.storyboard */,
+				AAB250E51F9049AB00927121 /* DetailViewController.swift */,
 				AA55038B1F8EA2090021324F /* MainTableViewController.swift */,
 				AA55038D1F8EA23D0021324F /* messageController.swift */,
 				F38CB9021F744E1A001F26C6 /* Alamofire.xcodeproj */,
@@ -356,6 +359,7 @@
 			files = (
 				F38CB9011F744E13001F26C6 /* NetworkManager.swift in Sources */,
 				AA55038C1F8EA2090021324F /* MainTableViewController.swift in Sources */,
+				AAB250E61F9049AB00927121 /* DetailViewController.swift in Sources */,
 				F38CB8E11F744E00001F26C6 /* AppDelegate.swift in Sources */,
 				AA55038E1F8EA23D0021324F /* messageController.swift in Sources */,
 			);

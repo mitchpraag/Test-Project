@@ -9,30 +9,30 @@
 import Foundation
 
 
-struct Message {
+class Message {
     let title: String
     let body: String
-    let date: Date
+    let date: String
+
+    init(title: String, body: String, date: String) {
+        self.title = title
+        self.body = body
+        self.date = date
+    }
+    init? (notificationDict: [String: Any]) {
+        guard let title = notificationDict["Title"] as? String,
+                let body = notificationDict["Message"] as? String,
+             let date = notificationDict["Date"] as? String  else
+        { return nil }
+        
+        self.title = title
+        self.body = body
+        self.date = date
+    }
 }
 
-extension Message {
-    init?(json: [String: Any]) {
-        guard let name = json["title"] as? String,
-            let body = json["body"] as? String,
-            let date = json["date"] as? Date
-            
-            else {
-                return nil
-        }
-        
-        var messages: Set<Message> = []
-        for string in json {
-            guard let message = Message(json: string) else {
-                return nil
-            }
-            messages.insert(message)
-        }
-        
-    }
-    
-}
+
+
+
+
+
