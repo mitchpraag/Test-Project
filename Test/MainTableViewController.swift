@@ -15,8 +15,34 @@ class MainTableViewController: UITableViewController {
     let alamofireManager = NetworkManager.defaultManager.alamofireManager
     var messages: [Message] = []
 
+
+    @IBAction func sortValueChanged(_ sender: Any) {
+        switch segementedController.selectedSegmentIndex
+        {
+        case 0:
+            messages.sort(by: { $0.title.compare($1.title) == ComparisonResult.orderedAscending})
+            tableView.reloadData()
+        case 1:
+            messages.sort(by: { $0.date.compare($1.date) == ComparisonResult.orderedDescending})
+            tableView.reloadData()
+        default:
+            print("default")
+            
+        }
+    }
+    
+    @IBOutlet weak var segementedController: UISegmentedControl!
+
+
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        //segementedController.addTarget(self, action: "date", for: .valueChanged)
+        
+
     }
     @IBAction func loadButtonTapped(_ sender: Any) {
         NetworkManager.defaultManager.loadNotifications(success: { (notifications) in

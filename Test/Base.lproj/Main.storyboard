@@ -26,7 +26,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="2" id="ZIL-1g-mcW">
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="ZIL-1g-mcW">
                                             <rect key="frame" x="16" y="18" width="23" height="13.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
@@ -53,12 +53,27 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="0Fi-ea-hBO">
+                        <nil key="title"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="OZ7-la-zf4">
+                            <rect key="frame" x="127" y="7" width="121" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="Name"/>
+                                <segment title="Date"/>
+                            </segments>
+                            <connections>
+                                <action selector="sortValueChanged:" destination="eaZ-a3-6W3" eventType="valueChanged" id="SFP-R0-Gzg"/>
+                            </connections>
+                        </segmentedControl>
                         <barButtonItem key="rightBarButtonItem" title="LOAD" id="SMe-mD-x0I">
                             <connections>
                                 <action selector="loadButtonTapped:" destination="eaZ-a3-6W3" id="uQR-Kz-uuB"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="segementedController" destination="OZ7-la-zf4" id="1Xf-cl-6HK"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JDf-1l-YDn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
